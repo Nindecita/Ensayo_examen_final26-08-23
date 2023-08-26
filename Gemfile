@@ -27,8 +27,10 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "bootstrap"
+
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+# gem "redis", "~> 4.0"gem install jquery-rails
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -74,3 +76,7 @@ end
 gem "devise", "~> 4.9"
 gem "pg_search", "~> 2.3"
 gem "pagy", "~> 6.0"
+
+gem "jquery-rails", "~> 4.6"
+
+gem "popper_js", "~> 2.11"

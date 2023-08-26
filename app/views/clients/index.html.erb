@@ -1,14 +1,31 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Clients</h1>
-
+<h1>Clientes</h1>
 <div id="clients">
-  <% @clients.each do |client| %>
-    <%= render client %>
-    <p>
-      <%= link_to "Show this client", client %>
-    </p>
-  <% end %>
+  <%= link_to "Nuevo cliente", new_client_path, class:"btn btn-success" %>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @clients.each do |client| %>
+          <tr class="">
+            <td> <%= client.name %> </td>
+            <td> <%= client.email %> </td>
+            <td> <%= client.phone %> </td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <%= button_to "Eliminar", client, method: :delete, class:"btn btn-danger" %>
+                <%= link_to "Editar", edit_client_path(client.id), class:"btn btn-warning" %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
-
-<%= link_to "New client", new_client_path %>
