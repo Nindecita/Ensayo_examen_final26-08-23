@@ -2,7 +2,6 @@
   <% if call.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(call.errors.count, "error") %> prohibited this call from being saved:</h2>
-
       <ul>
         <% call.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,22 +9,22 @@
       </ul>
     </div>
   <% end %>
-
   <div>
     <%= form.label :reason, style: "display: block" %>
     <%= form.text_field :reason %>
   </div>
-
   <div>
     <%= form.label :detail, style: "display: block" %>
     <%= form.text_field :detail %>
   </div>
-
   <div>
     <%= form.label :client_id, style: "display: block" %>
     <%= form.text_field :client_id %>
   </div>
-
+  <div>
+    <%= form.label :requirement_id, style: "display: block" %>
+    <%= form.collection_select :requirement_id, @requirements, :id, :name, { include_blank: 'Por favor elige un requerimiento' } %>
+  </div>
   <div>
     <%= form.submit %>
   </div>

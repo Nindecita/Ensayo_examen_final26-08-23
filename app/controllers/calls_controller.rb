@@ -13,6 +13,7 @@ class CallsController < ApplicationController
   # GET /calls/new
   def new
     @call = Call.new
+    @requirements = Requirement.all
   end
 
   # GET /calls/1/edit
@@ -65,6 +66,6 @@ class CallsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def call_params
-      params.require(:call).permit(:reason, :detail, :client_id)
+      params.require(:call).permit(:reason, :detail, :client_id, :requirement_id)
     end
 end
