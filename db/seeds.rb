@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Requirement.create(name: "requerimiento")
-Requirement.create(name: "reclamo")
-Requirement.create(name: "consulta")
+#Requirement.create(name: "requerimiento")
+#Requirement.create(name: "reclamo")
+#Requirement.create(name: "consulta")
+#Client.create(name: "cliente 1",phone:"5556668",email: "r@r.cl" )
+#Client.create(name: "cliente 2",phone:"5556768",email: "a@r.cl" )
+#Client.create(name: "cliente 3",phone:"55566868",email: "s@r.cl" )

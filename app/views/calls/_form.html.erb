@@ -17,10 +17,17 @@
     <%= form.label :detail, style: "display: block" %>
     <%= form.text_field :detail %>
   </div>
+<!--
   <div>
     <%= form.label :client_id, style: "display: block" %>
     <%= form.text_field :client_id %>
   </div>
+-->
+  <div>
+  <%= form.label :client_id, style: "display: block" %>
+  <%= form.collection_select :client_id, @clients, :id, :name, { include_blank: 'Por favor elige un cliente' } %>
+</div>
+
   <div>
     <%= form.label :requirement_id, style: "display: block" %>
     <%= form.collection_select :requirement_id, @requirements, :id, :name, { include_blank: 'Por favor elige un requerimiento' } %>
