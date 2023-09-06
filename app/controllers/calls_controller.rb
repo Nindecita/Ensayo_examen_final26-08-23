@@ -14,6 +14,7 @@ class CallsController < ApplicationController
   def new
     @call = Call.new
     @requirements = Requirement.all
+    @clients = Client.all
   end
 
   # GET /calls/1/edit
